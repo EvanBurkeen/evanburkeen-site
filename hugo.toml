@@ -11,3 +11,13 @@ theme = 'PaperMod'
     [params.homeInfoParams]
         Title = "Evan Burkeen"
         Content = "Political Science @ Yale"
+
+[[menu.main]]
+    name = "Research"
+    url = "/posts/"
+    weight = 10
+
+[[menu.main]]
+    name = "Archive"
+    url = "/archives/"
+    weight = 20

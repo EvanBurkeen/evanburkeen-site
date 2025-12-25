@@ -1,12 +1,55 @@
-/* Using a more reliable font-face import */
 @import url('https://cdn.jsdelivr.net/npm/latin-modern-roman@1.0.2/index.min.css');
 
 :root {
-    --primary-font: "Latin Modern Roman", "Computer Modern Serif", "CMU Serif", serif;
+    --primary-font: "Latin Modern Roman", serif;
+    /* Light Mode: Ivory Paper Palette */
+    --theme: #fdfcf8;
+    --entry: #fdfcf8;
+    --secondary: #505050;
 }
 
+.dark {
+    /* Dark Mode: Deep Academic Blue */
+    --theme: #1a1c2c;
+    --entry: #1a1c2c;
+}
+
+/* Global Font Apply */
 html, body, p, h1, h2, h3, h4, h5, h6, .title, .content {
     font-family: var(--primary-font) !important;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Transform Posts into a Simple List */
+.first-entry, .post-entry {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    margin-bottom: 15px !important;
+    padding: 0 !important;
+}
+
+/* Post Titles Only */
+.post-entry .entry-header h2 {
+    font-size: 1.2rem !important;
+    font-weight: 500 !important;
+    color: var(--primary) !important;
+}
+
+/* Hide Post Summaries/Dates on Home Page */
+.entry-content, .entry-footer {
+    display: none !important;
+}
+
+/* Subtle Link Underline */
+.post-link::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 1px;
+    background: var(--secondary);
+    transition: width .3s;
+}
+
+.post-link:hover::after {
+    width: 100%;
 }
