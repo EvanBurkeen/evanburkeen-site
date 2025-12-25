@@ -6,15 +6,15 @@ theme = 'PaperMod'
 [params]
     env = "production"
     title = "Evan Burkeen"
-    # This pulls the LaTeX font from a web server
-    customCSS = ["https://cdn.jsdelivr.net/npm/latin-modern-roman@1.0.2/index.min.css"]
-    font_family = "'Latin Modern Roman', serif"
+    
+    # This line is the "bridge" to your new CSS file
+    customCSS = ["css/extended.css"]
 
     [params.homeInfoParams]
         Title = "Evan Burkeen"
         Content = "Political Science @ Yale"
 
-    # Removes the default Hugo "junk" for a clean look
+    # Minimalist settings to keep it looking professional
     ShowReadingTime = false
     displayFullContent = false
     hideMeta = true
