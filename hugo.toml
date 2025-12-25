@@ -1,4 +1,4 @@
-baseURL = 'https://evanburkeen.com/'
+baseURL = "https://evanburkeen.com/"
 title = "Evan Burkeen"
 languageCode = "en-us"
 theme = "PaperMod"
@@ -18,29 +18,33 @@ enableRobotsTXT = true
 [params]
   env = "production"
 
+  # Force light mode, ignore system dark mode
   defaultTheme = "light"
   disableThemeToggle = true
 
   mainSections = ["posts"]
 
-  # list/feed behavior
-  ShowSummary = false
+  # Kill list blurbs at the source (PaperMod v7)
+  hideSummary = true
   disableSpecial1stPost = true
 
+  # List/post UI cleanup
   ShowReadingTime = false
   ShowShareButtons = false
   ShowPostNavLinks = false
   ShowBreadCrumbs = false
   ShowToc = false
 
-  # ensure list date is DD-Mon-YYYY (CSS will uppercase month => DD-MON-YYYY)
+  # Feed date format -> DD-Mon-YYYY (CSS uppercases month -> DD-MON-YYYY)
   DateFormat = "02-Jan-2006"
 
+  # Remove footer text
   hideFooter = true
 
   [params.profileMode]
     enabled = false
 
+  # Home top block (ONLY place your name appears)
   [params.homeInfoParams]
     Title = ""
     Content = """

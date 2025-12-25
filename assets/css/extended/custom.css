@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 
-/* Background closer to “French vanilla” */
+/* French-vanilla-leaning background */
 :root {
-  --bg: #f6eed6; /* french-vanilla-ish */
+  --bg: #f7eed2;
   --fg: #000000;
 
-  /* PaperMod variables (override aggressively) */
+  /* PaperMod variables: force light palette */
   --theme: var(--bg) !important;
   --entry: transparent !important;
   --primary: var(--fg) !important;
@@ -17,9 +17,12 @@
   --main-width: 860px;
 }
 
-html { color-scheme: light !important; }
+html {
+  color-scheme: light !important;
+}
 
-html, body {
+html,
+body {
   background: var(--bg) !important;
   color: var(--fg) !important;
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji",
@@ -27,7 +30,8 @@ html, body {
 }
 
 /* Neutralize any dark-mode class PaperMod applies */
-body.dark, .dark {
+body.dark,
+.dark {
   background: var(--bg) !important;
   color: var(--fg) !important;
 
@@ -39,14 +43,20 @@ body.dark, .dark {
   --content: var(--fg) !important;
 }
 
-/* Hide PaperMod header/nav/logo/menu */
-header.header, nav.nav, .logo, #menu, .menu, .lang-switch, .theme-toggle {
+/* Remove PaperMod header/nav/logo/menu entirely */
+header.header,
+nav.nav,
+.logo,
+#menu,
+.menu,
+.lang-switch,
+.theme-toggle {
   display: none !important;
 }
 
-/* Kill any auto “page header” on home */
-body.home .page-header,
-body.home .page-header h1,
+/* Remove any page-title header (esp. on home) */
+.page-header,
+.page-header h1,
 body.home .main > header,
 body.home .main > header h1,
 body.home .main h1.page-title,
@@ -54,9 +64,11 @@ body.home .main > h1 {
   display: none !important;
 }
 
-.main { padding-top: 26px !important; }
+.main {
+  padding-top: 26px !important;
+}
 
-/* Home block */
+/* Home top block */
 .home-info {
   background: transparent !important;
   border: 0 !important;
@@ -64,12 +76,14 @@ body.home .main > h1 {
   margin: 0 0 18px 0 !important;
 }
 
-.home-top { display: inline-block !important; }
+.home-top {
+  display: inline-block !important;
+}
 
 .home-name {
   font-weight: 700 !important;
-  font-size: 34px !important;
-  line-height: 1.1 !important;
+  font-size: 36px !important;
+  line-height: 1.08 !important;
   letter-spacing: -0.03em !important;
   margin: 0 0 6px 0 !important;
 }
@@ -84,7 +98,7 @@ body.home .main > h1 {
 .home-email {
   font-size: 14px !important;
   line-height: 1.4 !important;
-  color: rgba(0, 0, 0, 0.78) !important;
+  color: rgba(0, 0, 0, 0.80) !important;
   text-decoration: none !important;
   border-bottom: 1px solid rgba(0, 0, 0, 0.25) !important;
   padding-bottom: 1px !important;
@@ -94,10 +108,17 @@ body.home .main > h1 {
   opacity: 0.72;
 }
 
-/* Remove social icon containers globally */
-.social-icons, .share-buttons { display: none !important; }
+/* Remove social/share containers everywhere */
+.social-icons,
+.share-buttons {
+  display: none !important;
+}
 
-/* Feed: flat single-line date + title (no card, no blurb) */
+/* -----------------------
+   Feed: plain date + title
+   ----------------------- */
+
+/* Remove embossed/card styling completely */
 .post-entry,
 .first-entry,
 .post-entry:hover {
@@ -110,13 +131,12 @@ body.home .main > h1 {
   transform: none !important;
 }
 
-/* Hide summaries/covers/etc */
+/* Hard-kill blurbs/summaries/covers no matter what template outputs */
 .post-entry .entry-content,
-.post-entry .entry-cover,
-.post-entry .entry-footer .post-tags,
-.post-entry .entry-footer .post-views,
-.post-entry .entry-footer .post-author,
-.post-entry .entry-footer .reading-time {
+.post-entry .entry-content *,
+.post-entry .entry-summary,
+.post-entry .post-description,
+.post-entry .entry-cover {
   display: none !important;
 }
 
@@ -127,6 +147,7 @@ body.home .main > h1 {
   gap: 14px !important;
 }
 
+/* date first */
 .post-entry .entry-footer {
   order: 1 !important;
   margin: 0 !important;
@@ -134,12 +155,12 @@ body.home .main > h1 {
   flex: 0 0 auto !important;
 }
 
-/* only keep the date in footer */
+/* only keep the date inside footer */
 .post-entry .entry-footer > *:not(.entry-date) {
   display: none !important;
 }
 
-/* DD-MON-YYYY (month uppercase via CSS) */
+/* DD-MON-YYYY (month uppercased) */
 .entry-date {
   font-size: 12px !important;
   letter-spacing: 0.08em !important;
@@ -148,6 +169,7 @@ body.home .main > h1 {
   white-space: nowrap !important;
 }
 
+/* title second */
 .post-entry .entry-header {
   order: 2 !important;
   margin: 0 !important;
@@ -170,13 +192,20 @@ body.home .main > h1 {
   text-overflow: ellipsis !important;
 }
 
-/* Links */
-a, a:visited {
+/* Global links */
+a,
+a:visited {
   color: #000 !important;
   text-decoration-thickness: 1px;
   text-underline-offset: 2px;
 }
-a:hover { opacity: 0.72; }
 
-/* Remove footer */
-footer.footer, body > footer { display: none !important; }
+a:hover {
+  opacity: 0.72;
+}
+
+/* Remove footer completely */
+footer.footer,
+body > footer {
+  display: none !important;
+}
