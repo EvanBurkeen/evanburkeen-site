@@ -1,45 +1,54 @@
 @import url('https://rsms.me/inter/inter.css');
 
 :root {
-    --theme: #fdfaf3; /* Cream / Beige */
-    --primary: #1d1d1f;
-    --secondary: #6e6e73;
+    --theme: #fdfaf3; /* Cream/Beige */
+    --primary: #000000; /* Deep Black */
+    --secondary: #6e6e73; /* Subtle Gray for dates */
     --entry: transparent;
 }
 
 html, body {
     font-family: 'Inter', -apple-system, sans-serif !important;
-    letter-spacing: -0.02em !important;
     background-color: var(--theme);
-}
-
-/* Make your name/title stand out more */
-.home-info .title {
-    font-size: 3.5rem !important;
-    font-weight: 800 !important;
-    background: linear-gradient(180deg, #1d1d1f 0%, #6e6e73 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-/* Post list: Clean lines, no boxes */
-.post-entry {
-    border-top: 1px solid rgba(0,0,0,0.08) !important;
-    padding: 30px 0 !important;
-    transition: opacity 0.2s ease;
-}
-
-.post-entry:hover {
-    opacity: 0.7;
-}
-
-/* Social icons at the bottom */
-.social-icons a {
-    margin: 0 10px;
-    color: var(--secondary);
-    transition: color 0.2s;
-}
-
-.social-icons a:hover {
     color: var(--primary);
+    letter-spacing: -0.02em !important;
+}
+
+/* Hide the site title in the header to reduce repetition */
+.header .logo {
+    display: none !important;
+}
+
+/* Post List Styling */
+.post-entry {
+    background: transparent !important;
+    border: none !important;
+    padding: 10px 0 !important;
+    margin-bottom: 5px !important;
+    display: flex !important;
+    flex-direction: row-reverse !important;
+    justify-content: flex-end !important;
+    align-items: baseline !important;
+    gap: 20px;
+}
+
+/* Make the title the main link */
+.post-title {
+    font-size: 1.1rem !important;
+    font-weight: 500 !important;
+    color: var(--primary) !important;
+}
+
+/* Style the date (appears before the title) */
+.entry-meta {
+    font-family: monospace; /* Optional: gives a technical vibe */
+    font-size: 0.85rem !important;
+    color: var(--secondary) !important;
+    text-transform: uppercase;
+    min-width: 120px;
+}
+
+/* Hide summaries and footers completely */
+.entry-content, .entry-footer, .first-entry {
+    display: none !important;
 }
