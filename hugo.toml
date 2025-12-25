@@ -5,12 +5,13 @@ theme = 'PaperMod'
 
 [params]
     env = "production"
+    # Points to your specific path
     customCSS = ["css/extended/main.css"]
     
-    # Correct High-end date format
+    # Force the Month to be caps via the CSS below, but set the structure here
     DateFormat = "02 Jan 2006"
 
-    # This structure is the most reliable for bringing back the bio
+    # Minimalist Bio
     [params.homeInfoParams]
         Title = "Evan Burkeen"
         Content = "Political Science @ Yale"
