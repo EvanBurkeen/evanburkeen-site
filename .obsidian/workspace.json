@@ -184,11 +184,16 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "6c9f878bada4b2f3",
+  "active": "f4642f754b8b11c9",
   "lastOpenFiles": [
+    "assets/css/extended.css",
+    "assets/css/extended.txt",
+    "assets/css/extended.css.md",
+    "content/posts/my-first-sovereign-post.md.md",
+    "assets/css",
+    "assets/css.md",
     "Untitled",
     "hugo.toml.md",
-    "content/posts/my-first-sovereign-post.md.md",
     "content/posts/my-first-post.md"
   ]
 }

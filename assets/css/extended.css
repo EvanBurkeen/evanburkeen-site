@@ -1,0 +1,9 @@
+@import url('https://cdn.jsdelivr.net/npm/latin-modern-roman@1.0.2/index.min.css');
+
+body {
+    font-family: "Latin Modern Roman", serif !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Latin Modern Roman", serif !important;
+}
