@@ -1,5 +1,5 @@
 ---
-title: A list, not a lens
+title: "[14 JUL 2025] A list, not a lens"
 date: 2025-07-14
 draft: false
 ---
