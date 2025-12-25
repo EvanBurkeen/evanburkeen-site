@@ -1,12 +1,7 @@
 baseURL = 'https://evanburkeen.com/'
-languageCode = 'en-us'
-title = 'Evan Burkeen'
 theme = 'PaperMod'
 
 [params]
-    env = "production"
-    title = "Evan Burkeen"
-    # This must be EXACTLY like this, including the brackets
     customCSS = ["css/extended.css"]
 
     [params.homeInfoParams]
