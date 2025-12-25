@@ -4,20 +4,25 @@ title = 'Evan Burkeen'
 theme = 'PaperMod'
 
 [params]
-    env = "production"
-    title = "Evan Burkeen"
-    customCSS = ["css/extended.css"]
+    # This adds the "Social" icons (Twitter/GitHub/Email)
+    socialIcons = [
+        { name = "twitter", url = "https://twitter.com/yourhandle" },
+        { name = "github", url = "https://github.com/EvanBurkeen" },
+        { name = "email", url = "mailto:evan.burkeen@yale.edu" }
+    ]
 
+    # This adds a small profile image next to your name
     [params.homeInfoParams]
         Title = "Evan Burkeen"
         Content = "Political Science @ Yale"
 
+# This adds the navigation links at the top right
 [[menu.main]]
     name = "Research"
     url = "/posts/"
     weight = 10
 
 [[menu.main]]
-    name = "Archive"
-    url = "/archives/"
+    name = "CV"
+    url = "/cv/"
     weight = 20
