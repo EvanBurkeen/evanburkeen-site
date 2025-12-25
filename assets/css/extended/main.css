@@ -10,47 +10,56 @@ body {
     font-family: 'Inter', -apple-system, sans-serif !important;
     background-color: var(--theme) !important;
     color: var(--primary) !important;
+    letter-spacing: -0.02em !important;
 }
 
-/* Hide the small top-left logo only */
-.header .logo { display: none !important; }
+/* Hide redundant top logo */
+.header { display: none !important; }
 
-/* Ensure the center bio is visible and clean */
+/* Ensure Home Info (Name + Yale) is visible */
 .home-info {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: flex-start !important;
-    margin-top: 80px !important;
-    margin-bottom: 60px !important;
+    margin-top: 100px !important;
+    margin-bottom: 80px !important;
+    display: block !important; /* Forces it to show */
 }
 
 .home-info .title {
-    font-size: 2.8rem !important;
+    font-size: 2.2rem !important;
     font-weight: 700 !important;
-    margin: 0 0 10px 0 !important;
+    margin-bottom: 8px !important;
 }
 
 .home-info .description {
-    font-size: 1.2rem !important;
-    color: var(--secondary) !important;
+    font-size: 1.1rem !important;
+    color: var(--primary) !important;
 }
 
-/* Post list styling (Date Title) */
+/* Single line Date + Title list */
 .post-entry {
     background: transparent !important;
     border: none !important;
-    padding: 12px 0 !important;
+    padding: 8px 0 !important;
+    margin: 0 !important;
     display: flex !important;
-    gap: 25px;
+    flex-direction: row !important; /* Date first, then Title */
     align-items: baseline !important;
+    gap: 20px;
 }
 
+/* Date Styling */
 .entry-meta {
-    font-family: monospace;
-    font-size: 0.8rem !important;
+    font-family: ui-monospace, SFMono-Regular, monospace;
+    font-size: 0.75rem !important;
     color: var(--secondary) !important;
-    min-width: 100px;
+    text-transform: uppercase;
+    min-width: 100px; /* Keeps dates aligned */
 }
 
-/* Hide summaries */
-.entry-content, .entry-footer { display: none !important; }
+/* Smaller, cleaner Post Title */
+.post-title {
+    font-size: 1rem !important;
+    font-weight: 500 !important;
+}
+
+/* Hide all other theme clutter */
+.entry-content, .entry-footer, .first-entry { display: none !important; }
