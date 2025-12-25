@@ -6,8 +6,7 @@ theme = 'PaperMod'
 [params]
     env = "production"
     title = "Evan Burkeen"
-    
-    # This line is the "bridge" to your new CSS file
+    # This must be EXACTLY like this, including the brackets
     customCSS = ["css/extended.css"]
 
     [params.homeInfoParams]
