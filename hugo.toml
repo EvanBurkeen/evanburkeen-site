@@ -5,12 +5,10 @@ theme = 'PaperMod'
 
 [params]
     env = "production"
-    title = "Evan Burkeen"
     customCSS = ["css/extended.css"]
     
-    # Date format: DD MON YYYY (e.g., 24 DEC 2025)
+    # High-end date format
     DateFormat = "02 Jan 2006"
-    ShowSocialButtons = true
 
     [params.homeInfoParams]
         Title = "Evan Burkeen"
@@ -19,5 +17,3 @@ theme = 'PaperMod'
     [[params.socialIcons]]
         name = "email"
         url = "mailto:evan.burkeen@yale.edu"
-
-# Remove the menu section entirely to keep the top of the page empty

@@ -1,54 +1,59 @@
 @import url('https://rsms.me/inter/inter.css');
 
+/* Force Cream Background & Black Text regardless of System Settings */
 :root {
-    --theme: #fdfaf3; /* Cream/Beige */
-    --primary: #000000; /* Deep Black */
-    --secondary: #6e6e73; /* Subtle Gray for dates */
-    --entry: transparent;
+    --theme: #fdfaf3 !important; 
+    --primary: #000000 !important;
+    --secondary: #86868b !important; /* Elegant gray for dates */
+    --content: #000000 !important;
 }
 
-html, body {
+body {
     font-family: 'Inter', -apple-system, sans-serif !important;
-    background-color: var(--theme);
-    color: var(--primary);
+    background-color: var(--theme) !important;
+    color: var(--primary) !important;
     letter-spacing: -0.02em !important;
 }
 
-/* Hide the site title in the header to reduce repetition */
-.header .logo {
-    display: none !important;
+/* Hide the repetitive top logo/header */
+.header { display: none !important; }
+
+/* Home Info Styling (The only place your name appears) */
+.home-info {
+    margin-top: 100px !important;
+    text-align: left !important;
 }
 
-/* Post List Styling */
+.home-info .title {
+    font-size: 2.5rem !important;
+    font-weight: 700 !important;
+    margin-bottom: 10px !important;
+}
+
+/* Simplified Post List: [DATE] [TITLE] */
 .post-entry {
     background: transparent !important;
     border: none !important;
-    padding: 10px 0 !important;
-    margin-bottom: 5px !important;
+    padding: 15px 0 !important;
+    margin: 0 !important;
     display: flex !important;
-    flex-direction: row-reverse !important;
-    justify-content: flex-end !important;
     align-items: baseline !important;
-    gap: 20px;
+    gap: 30px; /* Space between date and title */
 }
 
-/* Make the title the main link */
+/* Date Styling */
+.entry-meta {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.8rem !important;
+    color: var(--secondary) !important;
+    white-space: nowrap;
+    order: -1; /* Puts date first */
+}
+
 .post-title {
     font-size: 1.1rem !important;
     font-weight: 500 !important;
-    color: var(--primary) !important;
 }
 
-/* Style the date (appears before the title) */
-.entry-meta {
-    font-family: monospace; /* Optional: gives a technical vibe */
-    font-size: 0.85rem !important;
-    color: var(--secondary) !important;
-    text-transform: uppercase;
-    min-width: 120px;
-}
-
-/* Hide summaries and footers completely */
-.entry-content, .entry-footer, .first-entry {
-    display: none !important;
-}
+/* Hide the "Boxes" and Summaries */
+.entry-content, .entry-footer, .first-entry { display: none !important; }
