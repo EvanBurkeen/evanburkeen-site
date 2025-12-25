@@ -1,138 +1,118 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 
-/* Creamier background (slightly less white than #fdfaf3) */
+/* Slightly creamier than before */
 :root {
-  --bg: #fbf5e8;
+  --bg: #fbf2df; /* creamier, less white */
   --fg: #000000;
 
+  /* PaperMod vars: force light palette */
   --theme: var(--bg) !important;
-  --entry: var(--bg) !important;
+  --entry: transparent !important;
   --primary: var(--fg) !important;
   --secondary: rgba(0, 0, 0, 0.78) !important;
   --tertiary: rgba(0, 0, 0, 0.60) !important;
   --content: var(--fg) !important;
-  --hljs-bg: #f3ecdd !important;
-  --code-bg: #f3ecdd !important;
-  --border: rgba(0, 0, 0, 0.10) !important;
+  --border: rgba(0, 0, 0, 0.12) !important;
 
   --main-width: 860px;
 }
 
-html {
-  color-scheme: light !important;
-}
+html { color-scheme: light !important; }
 
-html,
-body {
+html, body {
   background: var(--bg) !important;
   color: var(--fg) !important;
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji",
     "Segoe UI Emoji" !important;
 }
 
-/* Neutralize any dark-mode class PaperMod adds */
-body.dark,
-.dark {
+/* PaperMod sometimes toggles .dark; neutralize it */
+body.dark, .dark {
   background: var(--bg) !important;
   color: var(--fg) !important;
 
   --theme: var(--bg) !important;
-  --entry: var(--bg) !important;
+  --entry: transparent !important;
   --primary: var(--fg) !important;
   --secondary: rgba(0, 0, 0, 0.78) !important;
   --tertiary: rgba(0, 0, 0, 0.60) !important;
   --content: var(--fg) !important;
-  --border: rgba(0, 0, 0, 0.10) !important;
 }
 
-/* Links */
-a,
-a:visited {
-  color: #000 !important;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
-}
-
-a:hover {
-  opacity: 0.72;
-}
-
-/* Hide PaperMod header/nav/logo/menu */
-header.header,
-nav.nav,
-.logo,
-#menu,
-.menu,
-.lang-switch,
-.theme-toggle {
+/* Kill header/nav/logo/menu entirely */
+header.header, nav.nav, .logo, #menu, .menu, .lang-switch, .theme-toggle {
   display: none !important;
 }
 
-/* Remove “Posts”/section headings that sometimes appear */
-.page-header,
-.page-header h1 {
+/* Home: remove any “page title” heading that PaperMod renders above content */
+body.home .page-header,
+body.home .page-header h1,
+body.home .main > header,
+body.home .main > header h1,
+body.home .main h1.page-title,
+body.home .main > h1 {
   display: none !important;
 }
 
-.main {
-  padding-top: 28px !important;
-}
+/* Tighten layout */
+.main { padding-top: 22px !important; }
 
-/* Home block (homeInfoParams) */
+/* Home info block: left-aligned, compact */
 .home-info {
   background: transparent !important;
   border: 0 !important;
   padding: 0 !important;
-  margin: 0 0 22px 0 !important;
+  margin: 0 0 18px 0 !important;
 }
+
+.home-top { display: inline-block !important; }
 
 .home-name {
   font-weight: 600 !important;
-  font-size: 28px !important;
+  font-size: 22px !important;
   line-height: 1.15 !important;
   letter-spacing: -0.02em !important;
-  margin: 0 0 6px 0 !important;
+  margin: 0 0 4px 0 !important;
 }
 
 .home-subhead {
-  font-size: 14px !important;
+  font-size: 13px !important;
   line-height: 1.4 !important;
   color: rgba(0, 0, 0, 0.72) !important;
-  margin: 0 0 12px 0 !important;
+  margin: 0 0 10px 0 !important;
 }
 
 .email-link {
   display: inline-flex !important;
   align-items: center !important;
-  padding: 6px 0 !important;
   text-decoration: none !important;
+  padding: 2px 0 !important;
 }
 
-.email-link svg {
-  fill: #000 !important;
-  display: block !important;
-}
+.email-link svg { fill: #000 !important; display: block !important; }
 
-/* Remove social icon containers everywhere */
-.social-icons,
-.share-buttons {
-  display: none !important;
-}
+/* Remove social icon containers globally */
+.social-icons, .share-buttons { display: none !important; }
 
-/* Post list: plain single-line, no emboss/card */
-.post-entry {
+/* ==============
+   Post list: plain text line (no card, no summary)
+   Desired: DD-MON-YYYY  Title
+   DateFormat in TOML is 02-Jan-2006; CSS uppercases month.
+   ============== */
+
+.post-entry,
+.first-entry,
+.post-entry:hover {
   background: transparent !important;
   border: 0 !important;
   box-shadow: none !important;
   border-radius: 0 !important;
   padding: 0 !important;
-  margin: 10px 0 !important;
-
-  display: flex !important;
-  align-items: baseline !important;
+  margin: 8px 0 !important;
+  transform: none !important;
 }
 
-/* Hide summaries, covers, read-more, etc. */
+/* hide anything except date + title */
 .post-entry .entry-content,
 .post-entry .entry-cover,
 .post-entry .entry-footer .post-tags,
@@ -142,7 +122,14 @@ nav.nav,
   display: none !important;
 }
 
-/* We only want date + title */
+/* layout: date then title, one line */
+.post-entry {
+  display: flex !important;
+  align-items: baseline !important;
+  gap: 14px !important;
+}
+
+/* date block */
 .post-entry .entry-footer {
   order: 1 !important;
   margin: 0 !important;
@@ -150,35 +137,28 @@ nav.nav,
   flex: 0 0 auto !important;
 }
 
+/* hide everything in footer except the date element */
+.post-entry .entry-footer > *:not(.entry-date) {
+  display: none !important;
+}
+
+.entry-date {
+  font-size: 12px !important;
+  letter-spacing: 0.08em !important;
+  color: rgba(0, 0, 0, 0.75) !important;
+  text-transform: uppercase !important; /* makes Jan -> JAN */
+  white-space: nowrap !important;
+}
+
+/* title block */
 .post-entry .entry-header {
   order: 2 !important;
   margin: 0 !important;
   padding: 0 !important;
   flex: 1 1 auto !important;
   min-width: 0 !important;
-  overflow: hidden !important;
 }
 
-/* Hide everything in footer except date */
-.post-entry .entry-footer > *:not(.entry-date) {
-  display: none !important;
-}
-
-/* Date: DD-MON-YYYY (we’ll enforce MON caps with CSS; format comes from Hugo/PaperMod) */
-.entry-date {
-  font-size: 12px !important;
-  letter-spacing: 0.08em !important;
-  color: rgba(0, 0, 0, 0.78) !important;
-  text-transform: uppercase !important;
-  white-space: nowrap !important;
-}
-
-/* Separator */
-.entry-date::after {
-  content: "  " !important;
-}
-
-/* Title */
 .post-entry .entry-header h2,
 .post-entry .entry-header h2 a {
   font-size: 14px !important;
@@ -193,8 +173,13 @@ nav.nav,
   text-overflow: ellipsis !important;
 }
 
-/* Footer: remove entirely */
-footer.footer,
-body > footer {
-  display: none !important;
+/* links */
+a, a:visited {
+  color: #000 !important;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
 }
+a:hover { opacity: 0.72; }
+
+/* Remove footer entirely */
+footer.footer, body > footer { display: none !important; }
