@@ -1,14 +1,13 @@
 baseURL = 'https://evanburkeen.com/'
+languageCode = 'en-us'
+title = 'Evan Burkeen'
 theme = 'PaperMod'
 
 [params]
+    env = "production"
+    title = "Evan Burkeen"
     customCSS = ["css/extended.css"]
 
     [params.homeInfoParams]
         Title = "Evan Burkeen"
         Content = "Political Science @ Yale"
-
-    # Minimalist settings to keep it looking professional
-    ShowReadingTime = false
-    displayFullContent = false
-    hideMeta = true
