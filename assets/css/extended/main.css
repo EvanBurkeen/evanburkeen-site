@@ -1,9 +1,12 @@
+/* Using a more reliable font-face import */
 @import url('https://cdn.jsdelivr.net/npm/latin-modern-roman@1.0.2/index.min.css');
 
-body {
-    font-family: "Latin Modern Roman", serif !important;
+:root {
+    --primary-font: "Latin Modern Roman", "Computer Modern Serif", "CMU Serif", serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: "Latin Modern Roman", serif !important;
+html, body, p, h1, h2, h3, h4, h5, h6, .title, .content {
+    font-family: var(--primary-font) !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
