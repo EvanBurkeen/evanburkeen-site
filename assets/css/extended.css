@@ -1,31 +1,25 @@
-/* Inter via CDN */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 
-/* -----------------------------
-   Global: force "Tech Startup" light theme
-   ----------------------------- */
-
+/* Creamier background (slightly less white than #fdfaf3) */
 :root {
-  --bg: #fdfaf3;
+  --bg: #fbf5e8;
   --fg: #000000;
 
-  /* PaperMod variables (override aggressively) */
   --theme: var(--bg) !important;
   --entry: var(--bg) !important;
   --primary: var(--fg) !important;
   --secondary: rgba(0, 0, 0, 0.78) !important;
   --tertiary: rgba(0, 0, 0, 0.60) !important;
   --content: var(--fg) !important;
-  --hljs-bg: #f6f1e6 !important;
-  --code-bg: #f6f1e6 !important;
+  --hljs-bg: #f3ecdd !important;
+  --code-bg: #f3ecdd !important;
   --border: rgba(0, 0, 0, 0.10) !important;
 
-  /* layout */
   --main-width: 860px;
 }
 
 html {
-  color-scheme: light !important; /* keeps form controls/light UI light */
+  color-scheme: light !important;
 }
 
 html,
@@ -36,7 +30,7 @@ body {
     "Segoe UI Emoji" !important;
 }
 
-/* PaperMod can add .dark based on localStorage or system. Neutralize it. */
+/* Neutralize any dark-mode class PaperMod adds */
 body.dark,
 .dark {
   background: var(--bg) !important;
@@ -51,7 +45,7 @@ body.dark,
   --border: rgba(0, 0, 0, 0.10) !important;
 }
 
-/* Links: keep clean + readable */
+/* Links */
 a,
 a:visited {
   color: #000 !important;
@@ -63,10 +57,7 @@ a:hover {
   opacity: 0.72;
 }
 
-/* -----------------------------
-   Remove PaperMod header/nav/logo entirely
-   ----------------------------- */
-
+/* Hide PaperMod header/nav/logo/menu */
 header.header,
 nav.nav,
 .logo,
@@ -77,29 +68,25 @@ nav.nav,
   display: none !important;
 }
 
-/* Remove any page header “Posts”/section headings that can appear */
+/* Remove “Posts”/section headings that sometimes appear */
 .page-header,
 .page-header h1 {
   display: none !important;
 }
 
-/* Tighten top spacing since header is gone */
 .main {
   padding-top: 28px !important;
 }
 
-/* -----------------------------
-   Home “bio” block styling (homeInfoParams)
-   ----------------------------- */
-
+/* Home block (homeInfoParams) */
 .home-info {
   background: transparent !important;
   border: 0 !important;
   padding: 0 !important;
-  margin: 0 0 26px 0 !important;
+  margin: 0 0 22px 0 !important;
 }
 
-.home-info h1 {
+.home-name {
   font-weight: 600 !important;
   font-size: 28px !important;
   line-height: 1.15 !important;
@@ -114,13 +101,10 @@ nav.nav,
   margin: 0 0 12px 0 !important;
 }
 
-/* Email icon/link only */
 .email-link {
   display: inline-flex !important;
   align-items: center !important;
-  gap: 10px !important;
   padding: 6px 0 !important;
-  border: 0 !important;
   text-decoration: none !important;
 }
 
@@ -129,19 +113,13 @@ nav.nav,
   display: block !important;
 }
 
-/* Ensure no global social icon containers show */
+/* Remove social icon containers everywhere */
 .social-icons,
-.social-icons a,
-.share-buttons,
-.post-meta .social-icons {
+.share-buttons {
   display: none !important;
 }
 
-/* -----------------------------
-   Post list: single-line feed: [DATE] — [TITLE]
-   ----------------------------- */
-
-/* Remove card/box styling */
+/* Post list: plain single-line, no emboss/card */
 .post-entry {
   background: transparent !important;
   border: 0 !important;
@@ -149,34 +127,12 @@ nav.nav,
   border-radius: 0 !important;
   padding: 0 !important;
   margin: 10px 0 !important;
-}
 
-/* Make each entry one horizontal line */
-.post-entry {
   display: flex !important;
   align-items: baseline !important;
-  gap: 0 !important;
 }
 
-/* Reorder: date first, then title */
-.post-entry .entry-footer {
-  order: 1 !important;
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-.post-entry .entry-header {
-  order: 2 !important;
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-/* Hide everything except date in footer */
-.post-entry .entry-footer > *:not(.entry-date) {
-  display: none !important;
-}
-
-/* Hide summaries, covers, “read more”, etc. */
+/* Hide summaries, covers, read-more, etc. */
 .post-entry .entry-content,
 .post-entry .entry-cover,
 .post-entry .entry-footer .post-tags,
@@ -186,7 +142,29 @@ nav.nav,
   display: none !important;
 }
 
-/* Date styling + uppercase month */
+/* We only want date + title */
+.post-entry .entry-footer {
+  order: 1 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  flex: 0 0 auto !important;
+}
+
+.post-entry .entry-header {
+  order: 2 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  flex: 1 1 auto !important;
+  min-width: 0 !important;
+  overflow: hidden !important;
+}
+
+/* Hide everything in footer except date */
+.post-entry .entry-footer > *:not(.entry-date) {
+  display: none !important;
+}
+
+/* Date: DD-MON-YYYY (we’ll enforce MON caps with CSS; format comes from Hugo/PaperMod) */
 .entry-date {
   font-size: 12px !important;
   letter-spacing: 0.08em !important;
@@ -195,13 +173,12 @@ nav.nav,
   white-space: nowrap !important;
 }
 
-/* Inject the em dash separator after the date */
+/* Separator */
 .entry-date::after {
-  content: " \u2014 " !important; /* — */
-  color: rgba(0, 0, 0, 0.55) !important;
+  content: "  " !important;
 }
 
-/* Title styling */
+/* Title */
 .post-entry .entry-header h2,
 .post-entry .entry-header h2 a {
   font-size: 14px !important;
@@ -210,47 +187,14 @@ nav.nav,
   letter-spacing: -0.01em !important;
   margin: 0 !important;
   color: #000 !important;
+
   white-space: nowrap !important;
-}
-
-/* Prevent wrapping; truncate cleanly on narrow screens */
-.post-entry {
-  overflow: hidden !important;
-}
-
-.post-entry .entry-header {
-  overflow: hidden !important;
-}
-
-.post-entry .entry-header h2 a {
-  display: inline-block !important;
-  max-width: 100% !important;
   overflow: hidden !important;
   text-overflow: ellipsis !important;
 }
 
-/* Keep date visible; allow title to shrink */
-.post-entry .entry-footer {
-  flex: 0 0 auto !important;
-}
-
-.post-entry .entry-header {
-  flex: 1 1 auto !important;
-  min-width: 0 !important;
-}
-
-/* -----------------------------
-   Global: remove footer + any leftover containers
-   ----------------------------- */
-
-footer.footer {
-  display: none !important;
-}
-
-/* Remove any bottom spacers used by footer */
-body > footer,
-.footer,
-.footer span,
-.footer a {
+/* Footer: remove entirely */
+footer.footer,
+body > footer {
   display: none !important;
 }

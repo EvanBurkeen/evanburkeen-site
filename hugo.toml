@@ -2,32 +2,28 @@ baseURL = 'https://evanburkeen.com/'
 title = "Evan Burkeen"
 languageCode = "en-us"
 theme = "PaperMod"
+enableRobotsTXT = true
+
+[permalinks]
+  posts = "/:slug/"
 
 [pagination]
   pagerSize = 50
 
-enableRobotsTXT = true
-
-# Recommended for clean URLs
-[permalinks]
-  posts = "/:slug/"
-
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
-      unsafe = true # required so homeInfoParams.Content can include inline SVG + HTML
+      unsafe = true
 
 [params]
   env = "production"
 
-  # Hard-force light mode (and remove the toggle)
+  # hard-force light mode
   defaultTheme = "light"
   disableThemeToggle = true
 
-  # Home page content (PaperMod "home info" block)
   mainSections = ["posts"]
 
-  # Kill common “extra UI”
   disableSpecial1stPost = true
   ShowReadingTime = false
   ShowShareButtons = false
@@ -35,17 +31,18 @@ enableRobotsTXT = true
   ShowBreadCrumbs = false
   ShowToc = false
 
-  # Remove footer text entirely
+  # prevent any footer copy
   hideFooter = true
 
-  # Ensure Profile Mode is OFF (prevents redundant header/bio behaviors)
+  # avoid profile mode duplication
   [params.profileMode]
     enabled = false
 
-  # Home info (bio) — must be exactly this structure to render
+  # one header block on home only (no extra page heading)
   [params.homeInfoParams]
-    Title = "Evan Burkeen"
+    Title = ""  # keep empty so you don't get a second "Evan Burkeen"
     Content = """
+<div class="home-name">Evan Burkeen</div>
 <div class="home-subhead">Political Science @ Yale</div>
 
 <a class="email-link" href="mailto:evan.burkeen@yale.edu" aria-label="Email Evan Burkeen">
@@ -55,6 +52,5 @@ enableRobotsTXT = true
 </a>
 """
 
-# Optional: keep RSS on
 [outputs]
   home = ["HTML", "RSS"]
