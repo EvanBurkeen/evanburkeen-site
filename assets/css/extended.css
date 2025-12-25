@@ -1,10 +1,11 @@
 @import url('https://rsms.me/inter/inter.css');
 
-/* 1. THEME OVERRIDE: Cream Background & Black Text */
+/* FORCE CREAM BACKGROUND & BLACK TEXT */
 :root {
     --theme: #fdfaf3 !important; 
     --primary: #000000 !important;
-    --secondary: #71717a !important;
+    --secondary: #86868b !important;
+    --content: #000000 !important;
 }
 
 body {
@@ -12,57 +13,56 @@ body {
     background-color: var(--theme) !important;
     color: var(--primary) !important;
     margin: 0 auto !important;
-    max-width: 700px !important;
-    padding: 80px 20px !important;
+    max-width: 650px !important;
+    padding: 100px 20px !important;
 }
 
-/* 2. HEADER: Hide everything except your name/bio */
-.header { display: none !important; }
+/* HIDE REDUNDANT THEME ELEMENTS */
+.header, .footer, .social-icons, .entry-content, .entry-footer, .first-entry { 
+    display: none !important; 
+}
 
+/* NAME & BIO STYLING */
 .home-info { 
     display: block !important; 
-    visibility: visible !important; 
-    margin-bottom: 60px !important; 
+    margin-bottom: 50px !important; 
 }
 
 .home-info .title { 
-    font-size: 2.2rem !important; 
-    font-weight: 800 !important; 
-    letter-spacing: -0.03em !important;
-    margin-bottom: 4px !important; 
+    font-size: 2rem !important; 
+    font-weight: 700 !important; 
+    margin: 0 0 4px 0 !important; 
 }
 
 .home-info .description { 
-    font-size: 1.1rem !important; 
-    color: var(--primary) !important;
+    font-size: 1rem !important; 
+    opacity: 1 !important;
 }
 
-/* 3. POST LIST: [DATE] - [TITLE] */
+/* POST LIST: [DATE] - [TITLE] ON ONE LINE */
 .post-entry {
     background: transparent !important;
     border: none !important;
-    padding: 10px 0 !important;
+    padding: 6px 0 !important;
     display: flex !important;
     align-items: baseline !important;
-    gap: 15px !important;
+    gap: 15px;
 }
 
 .entry-meta {
     font-family: ui-monospace, SFMono-Regular, monospace !important;
-    font-size: 0.75rem !important;
+    font-size: 0.7rem !important;
     color: var(--secondary) !important;
-    text-transform: uppercase !important; /* FORCES CAPS */
-    min-width: 110px !important;
+    text-transform: uppercase !important; /* FORCES ALL CAPS MON */
+    min-width: 100px;
 }
 
-.entry-meta::after { content: " —"; margin-left: 4px; }
+.entry-meta::after { 
+    content: " —"; 
+    margin-left: 2px; 
+}
 
 .post-title { 
-    font-size: 1rem !important; 
+    font-size: 0.95rem !important; 
     font-weight: 500 !important; 
-}
-
-/* 4. HIDE ALL CLUTTER */
-.entry-content, .entry-footer, .first-entry, .social-icons, .footer { 
-    display: none !important; 
 }

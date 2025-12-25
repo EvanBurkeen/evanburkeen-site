@@ -5,17 +5,14 @@ theme = 'PaperMod'
 
 [params]
     env = "production"
-    # Points to your specific path
+    # Note: We are using the default PaperMod path for reliability
     customCSS = ["css/extended.css"]
-    
-    # Force the Month to be caps via the CSS below, but set the structure here
     DateFormat = "02 Jan 2006"
 
-    # Minimalist Bio
-    [params.homeInfoParams]
-        Title = "Evan Burkeen"
-        Content = "Political Science @ Yale"
+[params.homeInfoParams]
+    Title = "Evan Burkeen"
+    Content = "Political Science @ Yale"
 
-    [[params.socialIcons]]
-        name = "email"
-        url = "mailto:evan.burkeen@yale.edu"
+[[params.socialIcons]]
+    name = "email"
+    url = "mailto:evan.burkeen@yale.edu"
