@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "hugo.toml.md",
+                "file": "content/posts/my-first-sovereign-post.md.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "hugo.toml"
+              "title": "my-first-sovereign-post.md"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "hugo.toml.md",
+                "file": "content/posts/my-first-sovereign-post.md.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for hugo.toml"
+              "title": "Backlinks for my-first-sovereign-post.md"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "hugo.toml.md",
+                "file": "content/posts/my-first-sovereign-post.md.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from hugo.toml"
+              "title": "Outgoing links from my-first-sovereign-post.md"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "hugo.toml.md",
+                "file": "content/posts/my-first-sovereign-post.md.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of hugo.toml"
+              "title": "Outline of my-first-sovereign-post.md"
             }
           }
         ]
@@ -184,10 +184,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "f4642f754b8b11c9",
+  "active": "6c9f878bada4b2f3",
   "lastOpenFiles": [
-    "content/posts/my-first-sovereign-post.md.md",
+    "Untitled",
     "hugo.toml.md",
+    "content/posts/my-first-sovereign-post.md.md",
     "content/posts/my-first-post.md"
   ]
 }

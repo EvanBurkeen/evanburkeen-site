@@ -1,4 +1,20 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://evanburkeen.com/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'Evan Burkeen'
 theme = 'PaperMod'
+
+[params]
+    env = "production"
+    title = "Evan Burkeen"
+    # This pulls the LaTeX font from a web server
+    customCSS = ["https://cdn.jsdelivr.net/npm/latin-modern-roman@1.0.2/index.min.css"]
+    font_family = "'Latin Modern Roman', serif"
+
+    [params.homeInfoParams]
+        Title = "Evan Burkeen"
+        Content = "Political Science @ Yale"
+
+    # Removes the default Hugo "junk" for a clean look
+    ShowReadingTime = false
+    displayFullContent = false
+    hideMeta = true
