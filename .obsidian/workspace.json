@@ -186,12 +186,13 @@
   },
   "active": "f4642f754b8b11c9",
   "lastOpenFiles": [
+    "assets/css/extended.css",
+    "assets/css/main.css",
     "assets/css/extended/main.css",
     "assets/css/extended/extended.css",
     "assets/css/extended",
     "hugo.toml",
     "assets/css/untitled folder",
-    "assets/css/extended.css",
     "hugo.txt",
     "hugo.rtf",
     "assets/css/extended.txt",
@@ -199,7 +200,6 @@
     "content/posts/A list, not a lens.md",
     "assets/css",
     "assets/css.md",
-    "Untitled",
     "hugo.toml.md",
     "content/posts/my-first-post.md"
   ]

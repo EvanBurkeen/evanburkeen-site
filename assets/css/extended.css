@@ -1,0 +1,68 @@
+@import url('https://rsms.me/inter/inter.css');
+
+/* 1. THEME OVERRIDE: Cream Background & Black Text */
+:root {
+    --theme: #fdfaf3 !important; 
+    --primary: #000000 !important;
+    --secondary: #71717a !important;
+}
+
+body {
+    font-family: 'Inter', sans-serif !important;
+    background-color: var(--theme) !important;
+    color: var(--primary) !important;
+    margin: 0 auto !important;
+    max-width: 700px !important;
+    padding: 80px 20px !important;
+}
+
+/* 2. HEADER: Hide everything except your name/bio */
+.header { display: none !important; }
+
+.home-info { 
+    display: block !important; 
+    visibility: visible !important; 
+    margin-bottom: 60px !important; 
+}
+
+.home-info .title { 
+    font-size: 2.2rem !important; 
+    font-weight: 800 !important; 
+    letter-spacing: -0.03em !important;
+    margin-bottom: 4px !important; 
+}
+
+.home-info .description { 
+    font-size: 1.1rem !important; 
+    color: var(--primary) !important;
+}
+
+/* 3. POST LIST: [DATE] - [TITLE] */
+.post-entry {
+    background: transparent !important;
+    border: none !important;
+    padding: 10px 0 !important;
+    display: flex !important;
+    align-items: baseline !important;
+    gap: 15px !important;
+}
+
+.entry-meta {
+    font-family: ui-monospace, SFMono-Regular, monospace !important;
+    font-size: 0.75rem !important;
+    color: var(--secondary) !important;
+    text-transform: uppercase !important; /* FORCES CAPS */
+    min-width: 110px !important;
+}
+
+.entry-meta::after { content: " —"; margin-left: 4px; }
+
+.post-title { 
+    font-size: 1rem !important; 
+    font-weight: 500 !important; 
+}
+
+/* 4. HIDE ALL CLUTTER */
+.entry-content, .entry-footer, .first-entry, .social-icons, .footer { 
+    display: none !important; 
+}
