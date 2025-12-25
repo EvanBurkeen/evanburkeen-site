@@ -1,18 +1,57 @@
 baseURL = 'https://evanburkeen.com/'
-languageCode = 'en-us'
-title = 'Evan Burkeen'
-theme = 'PaperMod'
+title = "Evan Burkeen"
+languageCode = "en-us"
+theme = "PaperMod"
+paginate = 50
+enableRobotsTXT = true
+
+# Recommended for clean URLs
+[permalinks]
+  posts = "/:slug/"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true # required so homeInfoParams.Content can include inline SVG + HTML
 
 [params]
-    env = "production"
-    # Note: We are using the default PaperMod path for reliability
-    customCSS = ["css/extended.css"]
-    DateFormat = "02 Jan 2006"
+  env = "production"
 
-[params.homeInfoParams]
+  # Hard-force light mode (and remove the toggle)
+  defaultTheme = "light"
+  disableThemeToggle = true
+
+  # Home page content (PaperMod "home info" block)
+  mainSections = ["posts"]
+
+  # Kill common “extra UI”
+  disableSpecial1stPost = true
+  ShowReadingTime = false
+  ShowShareButtons = false
+  ShowPostNavLinks = false
+  ShowBreadCrumbs = false
+  ShowToc = false
+
+  # Remove footer text entirely
+  hideFooter = true
+
+  # Ensure Profile Mode is OFF (prevents redundant header/bio behaviors)
+  [params.profileMode]
+    enabled = false
+
+  # Home info (bio) — must be exactly this structure to render
+  [params.homeInfoParams]
     Title = "Evan Burkeen"
-    Content = "Political Science @ Yale"
+    Content = """
+<div class="home-subhead">Political Science @ Yale</div>
 
-[[params.socialIcons]]
-    name = "email"
-    url = "mailto:evan.burkeen@yale.edu"
+<a class="email-link" href="mailto:evan.burkeen@yale.edu" aria-label="Email Evan Burkeen">
+  <svg viewBox="0 0 24 24" width="18" height="18" role="img" aria-hidden="true">
+    <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2Zm0 4-8 5L4 8V6l8 5 8-5v2Z"></path>
+  </svg>
+</a>
+"""
+
+# Optional: keep RSS on
+[outputs]
+  home = ["HTML", "RSS"]
