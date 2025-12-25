@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/posts/A list, not a lens.md",
+                "file": "content/posts/Soon.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "A list, not a lens"
+              "title": "Soon"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/posts/A list, not a lens.md",
+                "file": "content/posts/Soon.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for A list, not a lens"
+              "title": "Backlinks for Soon"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/posts/A list, not a lens.md",
+                "file": "content/posts/Soon.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from A list, not a lens"
+              "title": "Outgoing links from Soon"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/posts/A list, not a lens.md",
+                "file": "content/posts/Soon.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of A list, not a lens"
+              "title": "Outline of Soon"
             }
           }
         ]
@@ -198,7 +198,7 @@
     "hugo.rtf",
     "assets/css/extended.txt",
     "assets/css/extended.css.md",
-    "content/posts/A list, not a lens.md",
+    "content/posts/Soon.md",
     "assets/css.md",
     "hugo.toml.md",
     "content/posts/my-first-post.md"
