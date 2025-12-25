@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 
-/* Slightly creamier than before */
+/* Background closer to “French vanilla” */
 :root {
-  --bg: #fbf2df; /* creamier, less white */
+  --bg: #f6eed6; /* french-vanilla-ish */
   --fg: #000000;
 
-  /* PaperMod vars: force light palette */
+  /* PaperMod variables (override aggressively) */
   --theme: var(--bg) !important;
   --entry: transparent !important;
   --primary: var(--fg) !important;
@@ -26,7 +26,7 @@ html, body {
     "Segoe UI Emoji" !important;
 }
 
-/* PaperMod sometimes toggles .dark; neutralize it */
+/* Neutralize any dark-mode class PaperMod applies */
 body.dark, .dark {
   background: var(--bg) !important;
   color: var(--fg) !important;
@@ -39,12 +39,12 @@ body.dark, .dark {
   --content: var(--fg) !important;
 }
 
-/* Kill header/nav/logo/menu entirely */
+/* Hide PaperMod header/nav/logo/menu */
 header.header, nav.nav, .logo, #menu, .menu, .lang-switch, .theme-toggle {
   display: none !important;
 }
 
-/* Home: remove any “page title” heading that PaperMod renders above content */
+/* Kill any auto “page header” on home */
 body.home .page-header,
 body.home .page-header h1,
 body.home .main > header,
@@ -54,10 +54,9 @@ body.home .main > h1 {
   display: none !important;
 }
 
-/* Tighten layout */
-.main { padding-top: 22px !important; }
+.main { padding-top: 26px !important; }
 
-/* Home info block: left-aligned, compact */
+/* Home block */
 .home-info {
   background: transparent !important;
   border: 0 !important;
@@ -68,38 +67,37 @@ body.home .main > h1 {
 .home-top { display: inline-block !important; }
 
 .home-name {
-  font-weight: 600 !important;
-  font-size: 22px !important;
-  line-height: 1.15 !important;
-  letter-spacing: -0.02em !important;
-  margin: 0 0 4px 0 !important;
+  font-weight: 700 !important;
+  font-size: 34px !important;
+  line-height: 1.1 !important;
+  letter-spacing: -0.03em !important;
+  margin: 0 0 6px 0 !important;
 }
 
 .home-subhead {
-  font-size: 13px !important;
+  font-size: 14px !important;
   line-height: 1.4 !important;
   color: rgba(0, 0, 0, 0.72) !important;
   margin: 0 0 10px 0 !important;
 }
 
-.email-link {
-  display: inline-flex !important;
-  align-items: center !important;
+.home-email {
+  font-size: 14px !important;
+  line-height: 1.4 !important;
+  color: rgba(0, 0, 0, 0.78) !important;
   text-decoration: none !important;
-  padding: 2px 0 !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25) !important;
+  padding-bottom: 1px !important;
 }
 
-.email-link svg { fill: #000 !important; display: block !important; }
+.home-email:hover {
+  opacity: 0.72;
+}
 
 /* Remove social icon containers globally */
 .social-icons, .share-buttons { display: none !important; }
 
-/* ==============
-   Post list: plain text line (no card, no summary)
-   Desired: DD-MON-YYYY  Title
-   DateFormat in TOML is 02-Jan-2006; CSS uppercases month.
-   ============== */
-
+/* Feed: flat single-line date + title (no card, no blurb) */
 .post-entry,
 .first-entry,
 .post-entry:hover {
@@ -112,7 +110,7 @@ body.home .main > h1 {
   transform: none !important;
 }
 
-/* hide anything except date + title */
+/* Hide summaries/covers/etc */
 .post-entry .entry-content,
 .post-entry .entry-cover,
 .post-entry .entry-footer .post-tags,
@@ -122,14 +120,13 @@ body.home .main > h1 {
   display: none !important;
 }
 
-/* layout: date then title, one line */
+/* one line: date then title */
 .post-entry {
   display: flex !important;
   align-items: baseline !important;
   gap: 14px !important;
 }
 
-/* date block */
 .post-entry .entry-footer {
   order: 1 !important;
   margin: 0 !important;
@@ -137,20 +134,20 @@ body.home .main > h1 {
   flex: 0 0 auto !important;
 }
 
-/* hide everything in footer except the date element */
+/* only keep the date in footer */
 .post-entry .entry-footer > *:not(.entry-date) {
   display: none !important;
 }
 
+/* DD-MON-YYYY (month uppercase via CSS) */
 .entry-date {
   font-size: 12px !important;
   letter-spacing: 0.08em !important;
-  color: rgba(0, 0, 0, 0.75) !important;
-  text-transform: uppercase !important; /* makes Jan -> JAN */
+  color: rgba(0, 0, 0, 0.70) !important;
+  text-transform: uppercase !important;
   white-space: nowrap !important;
 }
 
-/* title block */
 .post-entry .entry-header {
   order: 2 !important;
   margin: 0 !important;
@@ -173,7 +170,7 @@ body.home .main > h1 {
   text-overflow: ellipsis !important;
 }
 
-/* links */
+/* Links */
 a, a:visited {
   color: #000 !important;
   text-decoration-thickness: 1px;
@@ -181,5 +178,5 @@ a, a:visited {
 }
 a:hover { opacity: 0.72; }
 
-/* Remove footer entirely */
+/* Remove footer */
 footer.footer, body > footer { display: none !important; }
