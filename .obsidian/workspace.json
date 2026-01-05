@@ -11,14 +11,10 @@
             "id": "f4642f754b8b11c9",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/posts/flights.evanburkeen.com.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "flights.evanburkeen.com"
+              "title": "New tab"
             }
           }
         ]
@@ -184,7 +180,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "f4642f754b8b11c9",
+  "active": "6c9f878bada4b2f3",
   "lastOpenFiles": [
     "hugo.toml.sb-d14c7557-iQfEHA",
     "layouts/partials/home_info.html",
@@ -198,7 +194,7 @@
     "assets/css/extended/main.css",
     "assets/css/extended",
     "assets/css/extended.css.md",
-    "content/posts/flights.evanburkeen.com.md",
+    "content/posts/Flights.md",
     "assets/css.md",
     "hugo.toml.md",
     "content/posts/my-first-post.md"
