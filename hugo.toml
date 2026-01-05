@@ -57,3 +57,8 @@ enableRobotsTXT = true
 
 [outputs]
   home = ["HTML", "RSS"]
+
+[[menu.main]]
+    name = "Flights"
+    url = "https://flights.evanburkeen.com"
+    weight = 10

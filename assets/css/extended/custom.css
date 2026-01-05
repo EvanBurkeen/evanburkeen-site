@@ -209,3 +209,16 @@ footer.footer,
 body > footer {
   display: none !important;
 }
+
+/* Unhide the menu specifically for the Flights link */
+nav.nav, #menu {
+    display: flex !important;
+}
+
+/* Style it to match your French-vanilla theme */
+#menu a {
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: underline;
+    color: #000 !important;
+}
