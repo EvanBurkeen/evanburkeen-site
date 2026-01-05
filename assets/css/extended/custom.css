@@ -222,3 +222,18 @@ nav.nav, #menu {
     text-decoration: underline;
     color: #000 !important;
 }
+
+.home-flights {
+    margin-left: 14px;
+    font-size: 14px;
+    line-height: 1.4;
+    color: rgba(0, 0, 0, 0.80) !important;
+    text-decoration: none !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25) !important;
+    padding-bottom: 1px !important;
+}
+
+.home-flights:hover {
+    opacity: 0.72;
+    border-bottom-color: #000 !important;
+}
