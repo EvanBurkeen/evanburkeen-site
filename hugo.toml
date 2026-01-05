@@ -62,6 +62,3 @@ enableRobotsTXT = true
     name = "Flights"
     url = "https://flights.evanburkeen.com"
     weight = 10
-
-[markup.goldmark.renderer]
-    unsafe = true
