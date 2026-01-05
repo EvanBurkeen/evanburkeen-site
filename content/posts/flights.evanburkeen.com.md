@@ -2,6 +2,8 @@
 title: flights.evanburkeen.com
 date: 2026-01-01
 draft: false
-aliases:
-  - https://flights.evanburkeen.com
 ---
+1. ```
+    <meta http-equiv="refresh" content="0; url=https://flights.evanburkeen.com">
+    ```
+    
