@@ -1,6 +1,6 @@
 ---
-title: "[24 DEC 2025] Soon"
+title: flights.evanburkeen.com
 date: 2025-12-24
 draft: false
+aliases:
 ---
-Soon
