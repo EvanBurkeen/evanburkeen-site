@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/posts/Soon.md",
+                "file": "content/posts/flights.evanburkeen.com.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Soon"
+              "title": "flights.evanburkeen.com"
             }
           }
         ]
@@ -198,7 +198,7 @@
     "hugo.rtf",
     "assets/css/extended.txt",
     "assets/css/extended.css.md",
-    "content/posts/Soon.md",
+    "content/posts/flights.evanburkeen.com.md",
     "assets/css.md",
     "hugo.toml.md",
     "content/posts/my-first-post.md"

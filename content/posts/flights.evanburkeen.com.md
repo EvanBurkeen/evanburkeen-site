@@ -1,6 +1,6 @@
 ---
 title: flights.evanburkeen.com
-date: 2025-12-24
+date: 2026-01-01
 draft: false
 aliases:
 ---
