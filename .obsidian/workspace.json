@@ -18,6 +18,22 @@
             }
           }
         ]
+      },
+      {
+        "id": "823e989e83580026",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5c6cfb5bfa32493c",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -180,8 +196,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "6c9f878bada4b2f3",
+  "active": "5c6cfb5bfa32493c",
   "lastOpenFiles": [
+    "content/posts/Flights.md",
     "layouts/partials/home_info.html",
     "layouts/partials/untitled folder",
     "hugo.toml.sb-d14c7557-iQfEHA",
@@ -192,9 +209,7 @@
     "assets/css/extended.css",
     "assets/css/main.css",
     "assets/css/extended/main.css",
-    "assets/css/extended",
     "assets/css/extended.css.md",
-    "content/posts/Flights.md",
     "assets/css.md",
     "hugo.toml.md",
     "content/posts/my-first-post.md"
