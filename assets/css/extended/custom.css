@@ -1,17 +1,16 @@
 
 /* French-vanilla-leaning background */
 :root {
-  --bg: #f7eed2;
-  --fg: #000000;
+  --bg: transparent;
+  --fg: #ffffff;
 
-  /* PaperMod variables: force light palette */
-  --theme: var(--bg) !important;
+  --theme: transparent !important;
   --entry: transparent !important;
-  --primary: var(--fg) !important;
-  --secondary: rgba(0, 0, 0, 0.78) !important;
-  --tertiary: rgba(0, 0, 0, 0.60) !important;
-  --content: var(--fg) !important;
-  --border: rgba(0, 0, 0, 0.12) !important;
+  --primary: #fff !important;
+  --secondary: rgba(255, 255, 255, 0.78) !important;
+  --tertiary: rgba(255, 255, 255, 0.60) !important;
+  --content: #fff !important;
+  --border: rgba(255, 255, 255, 0.15) !important;
 
   --main-width: 860px;
 }
@@ -20,24 +19,27 @@ html {
   color-scheme: light !important;
 }
 
-html {
-  background:
-    linear-gradient(rgba(0,0,0,0.68), rgba(0,0,0,0.68)),
-    url('/images/sunset.jpg') center center / cover no-repeat !important;
-  min-height: 100% !important;
-}
-
 html,
 body {
+  background: transparent !important;
   color: #fff !important;
   font-family: 'Apple SD Gothic Neo', -apple-system, BlinkMacSystemFont, sans-serif !important;
   font-weight: 500 !important;
   overflow-x: hidden;
+  min-height: 100vh !important;
 }
 
-body {
-  background: transparent !important;
-  min-height: 100vh !important;
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background:
+    linear-gradient(rgba(0,0,0,0.68), rgba(0,0,0,0.68)),
+    url('/images/sunset.jpg') center center / cover no-repeat;
+  z-index: -1;
 }
 
 body.dark,
