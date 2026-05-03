@@ -1,4 +1,3 @@
-@import url("https://cdn.jsdelivr.net/npm/computer-modern-font@1.0.1/fonts.css");
 
 /* French-vanilla-leaning background */
 :root {
@@ -24,18 +23,20 @@ html {
 html,
 body {
   background:
-    linear-gradient(rgba(0,0,0,0.72), rgba(0,0,0,0.72)),
-    url('/images/sunset.jpg') center 38% / cover fixed !important;
+    linear-gradient(rgba(0,0,0,0.68), rgba(0,0,0,0.68)),
+    url('/images/sunset.jpg') center center / cover no-repeat !important;
+  min-height: 100vh !important;
   color: #fff !important;
-  font-family: 'Computer Modern', 'CMU Serif', Georgia, serif !important;
+  font-family: 'Apple SD Gothic Neo', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  font-weight: 500 !important;
   overflow-x: hidden;
 }
 
 body.dark,
 .dark {
   background:
-    linear-gradient(rgba(0,0,0,0.72), rgba(0,0,0,0.72)),
-    url('/images/sunset.jpg') center 38% / cover fixed !important;
+    linear-gradient(rgba(0,0,0,0.68), rgba(0,0,0,0.68)),
+    url('/images/sunset.jpg') center center / cover no-repeat !important;
   color: #fff !important;
 }
 
@@ -61,42 +62,51 @@ body.home .main > h1 {
 }
 
 .main {
-  padding-top: 26px !important;
+  min-height: 100vh !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  padding: 0 !important;
+  max-width: 100% !important;
 }
 
 .home-info {
   background: transparent !important;
   border: 0 !important;
   padding: 0 !important;
-  margin: 0 0 18px 0 !important;
+  margin: 0 !important;
+  text-align: center !important;
 }
 
 .home-top {
-  display: inline-block !important;
+  display: flex !important;
+  justify-content: center !important;
+  gap: 20px !important;
 }
 
 .home-name {
-  font-weight: 700 !important;
-  font-size: 36px !important;
-  line-height: 1.08 !important;
-  letter-spacing: -0.03em !important;
-  margin: 0 0 6px 0 !important;
+  font-weight: 500 !important;
+  font-size: 38px !important;
+  line-height: 1.1 !important;
+  letter-spacing: -0.01em !important;
+  margin: 0 0 8px 0 !important;
   color: #fff !important;
 }
 
 .home-subhead {
-  font-size: 14px !important;
+  font-size: 15px !important;
   line-height: 1.4 !important;
-  color: rgba(255, 255, 255, 0.70) !important;
-  margin: 0 0 10px 0 !important;
+  color: rgba(255, 255, 255, 0.65) !important;
+  margin: 0 0 16px 0 !important;
 }
 
 .home-email {
   font-size: 14px !important;
   line-height: 1.4 !important;
-  color: rgba(255, 255, 255, 0.80) !important;
+  color: rgba(255, 255, 255, 0.75) !important;
   text-decoration: none !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.35) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.30) !important;
   padding-bottom: 1px !important;
 }
 
