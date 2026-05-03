@@ -41,7 +41,7 @@ body {
   width: 100vw;
   height: 100vh;
   background:
-    linear-gradient(rgba(0,0,0,0.68), rgba(0,0,0,0.68)),
+    linear-gradient(rgba(0,0,0,0.82), rgba(0,0,0,0.82)),
     url('/images/sunset.jpg') center center / cover no-repeat;
   z-index: -1;
 }
