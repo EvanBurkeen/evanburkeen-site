@@ -27,6 +27,7 @@ body {
   color: var(--fg) !important;
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji",
     "Segoe UI Emoji" !important;
+  overflow-x: hidden;
 }
 
 /* Neutralize any dark-mode class PaperMod applies */
@@ -65,10 +66,63 @@ body.home .main > h1 {
 }
 
 .main {
-  padding-top: 26px !important;
+  padding-top: 0 !important;
 }
 
-/* Home top block */
+/* Hero banner */
+.hero-banner {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: 58vh;
+  min-height: 340px;
+  max-height: 640px;
+  overflow: hidden;
+  margin-bottom: 36px;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 38%;
+  display: block;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.52) 0%, rgba(0,0,0,0.18) 55%, transparent 100%);
+  display: flex;
+  align-items: flex-end;
+}
+
+.hero-text {
+  width: 100%;
+  max-width: var(--main-width);
+  margin: 0 auto;
+  padding: 0 24px 36px;
+  box-sizing: border-box;
+}
+
+.home-name {
+  font-weight: 700 !important;
+  font-size: 40px !important;
+  line-height: 1.08 !important;
+  letter-spacing: -0.03em !important;
+  margin: 0 0 6px 0 !important;
+  color: #fff !important;
+}
+
+.home-subhead {
+  font-size: 14px !important;
+  line-height: 1.4 !important;
+  color: rgba(255, 255, 255, 0.82) !important;
+  margin: 0 !important;
+}
+
+/* Home info below hero */
 .home-info {
   background: transparent !important;
   border: 0 !important;
@@ -78,21 +132,6 @@ body.home .main > h1 {
 
 .home-top {
   display: inline-block !important;
-}
-
-.home-name {
-  font-weight: 700 !important;
-  font-size: 36px !important;
-  line-height: 1.08 !important;
-  letter-spacing: -0.03em !important;
-  margin: 0 0 6px 0 !important;
-}
-
-.home-subhead {
-  font-size: 14px !important;
-  line-height: 1.4 !important;
-  color: rgba(0, 0, 0, 0.72) !important;
-  margin: 0 0 10px 0 !important;
 }
 
 .home-email {
