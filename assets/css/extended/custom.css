@@ -43,7 +43,9 @@ body::before {
 }
 
 body.dark,
-.dark {
+.dark,
+body.list,
+.list {
   background: transparent !important;
   color: #fff !important;
 }
