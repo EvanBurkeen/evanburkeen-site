@@ -23,25 +23,29 @@ html {
 
 html,
 body {
-  background: var(--bg) !important;
-  color: var(--fg) !important;
+  background: #000 !important;
+  color: #fff !important;
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji",
     "Segoe UI Emoji" !important;
   overflow-x: hidden;
 }
 
-/* Neutralize any dark-mode class PaperMod applies */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url('/images/sunset.jpg');
+  background-size: cover;
+  background-position: center 38%;
+  background-repeat: no-repeat;
+  opacity: 0.28;
+  z-index: -1;
+}
+
 body.dark,
 .dark {
-  background: var(--bg) !important;
-  color: var(--fg) !important;
-
-  --theme: var(--bg) !important;
-  --entry: transparent !important;
-  --primary: var(--fg) !important;
-  --secondary: rgba(0, 0, 0, 0.78) !important;
-  --tertiary: rgba(0, 0, 0, 0.60) !important;
-  --content: var(--fg) !important;
+  background: #000 !important;
+  color: #fff !important;
 }
 
 /* Remove PaperMod header/nav/logo/menu entirely */
@@ -66,63 +70,9 @@ body.home .main > h1 {
 }
 
 .main {
-  padding-top: 0 !important;
+  padding-top: 26px !important;
 }
 
-/* Hero banner */
-.hero-banner {
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100vw;
-  height: 58vh;
-  min-height: 340px;
-  max-height: 640px;
-  overflow: hidden;
-  margin-bottom: 36px;
-}
-
-.hero-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 38%;
-  display: block;
-}
-
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.52) 0%, rgba(0,0,0,0.18) 55%, transparent 100%);
-  display: flex;
-  align-items: flex-end;
-}
-
-.hero-text {
-  width: 100%;
-  max-width: var(--main-width);
-  margin: 0 auto;
-  padding: 0 24px 36px;
-  box-sizing: border-box;
-}
-
-.home-name {
-  font-weight: 700 !important;
-  font-size: 40px !important;
-  line-height: 1.08 !important;
-  letter-spacing: -0.03em !important;
-  margin: 0 0 6px 0 !important;
-  color: #fff !important;
-}
-
-.home-subhead {
-  font-size: 14px !important;
-  line-height: 1.4 !important;
-  color: rgba(255, 255, 255, 0.82) !important;
-  margin: 0 !important;
-}
-
-/* Home info below hero */
 .home-info {
   background: transparent !important;
   border: 0 !important;
@@ -134,12 +84,28 @@ body.home .main > h1 {
   display: inline-block !important;
 }
 
+.home-name {
+  font-weight: 700 !important;
+  font-size: 36px !important;
+  line-height: 1.08 !important;
+  letter-spacing: -0.03em !important;
+  margin: 0 0 6px 0 !important;
+  color: #fff !important;
+}
+
+.home-subhead {
+  font-size: 14px !important;
+  line-height: 1.4 !important;
+  color: rgba(255, 255, 255, 0.70) !important;
+  margin: 0 0 10px 0 !important;
+}
+
 .home-email {
   font-size: 14px !important;
   line-height: 1.4 !important;
-  color: rgba(0, 0, 0, 0.80) !important;
+  color: rgba(255, 255, 255, 0.80) !important;
   text-decoration: none !important;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.25) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.35) !important;
   padding-bottom: 1px !important;
 }
 
@@ -203,7 +169,7 @@ body.home .main > h1 {
 .entry-date {
   font-size: 12px !important;
   letter-spacing: 0.08em !important;
-  color: rgba(0, 0, 0, 0.70) !important;
+  color: rgba(255, 255, 255, 0.55) !important;
   text-transform: uppercase !important;
   white-space: nowrap !important;
 }
@@ -224,7 +190,7 @@ body.home .main > h1 {
   line-height: 1.6 !important;
   letter-spacing: -0.01em !important;
   margin: 0 !important;
-  color: #000 !important;
+  color: #fff !important;
 
   white-space: nowrap !important;
   overflow: hidden !important;
@@ -234,7 +200,7 @@ body.home .main > h1 {
 /* Global links */
 a,
 a:visited {
-  color: #000 !important;
+  color: #fff !important;
   text-decoration-thickness: 1px;
   text-underline-offset: 2px;
 }
@@ -254,25 +220,25 @@ nav.nav, #menu {
     display: flex !important;
 }
 
-/* Style it to match your French-vanilla theme */
+/* Style it to match dark theme */
 #menu a {
     font-size: 14px;
     font-weight: 500;
     text-decoration: underline;
-    color: #000 !important;
+    color: #fff !important;
 }
 
 .home-flights {
     margin-left: 14px;
     font-size: 14px;
     line-height: 1.4;
-    color: rgba(0, 0, 0, 0.80) !important;
+    color: rgba(255, 255, 255, 0.80) !important;
     text-decoration: none !important;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.25) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.35) !important;
     padding-bottom: 1px !important;
 }
 
 .home-flights:hover {
     opacity: 0.72;
-    border-bottom-color: #000 !important;
+    border-bottom-color: #fff !important;
 }
