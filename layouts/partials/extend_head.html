@@ -1,8 +1,14 @@
 <style>
-  body {
+  html {
     background:
       linear-gradient(rgba(0,0,0,0.68), rgba(0,0,0,0.68)),
-      url('/images/sunset.jpg') center center / cover fixed !important;
+      url('/images/sunset.jpg') center center / cover !important;
+    background-attachment: fixed !important;
+    min-height: 100% !important;
+  }
+  body, body.list, .list {
+    background: transparent !important;
     color: #fff !important;
+    min-height: 100vh !important;
   }
 </style>
